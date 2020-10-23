@@ -507,7 +507,7 @@ EXPORT void CALL GetKeys( int Control, BUTTONS *Keys )
         go2_gamepad_state_t gamepad;
         go2_input_gamepad_read(input, &gamepad);
 
-        if (gamepad.buttons.f1)
+        if (gamepad.buttons.f1 && gamepad.buttons.f6)
         {
             SDL_Event sdlevent = {0};
             sdlevent.type = SDL_QUIT;
@@ -515,7 +515,7 @@ EXPORT void CALL GetKeys( int Control, BUTTONS *Keys )
             SDL_PushEvent(&sdlevent);
         }
 
-        Keys->START_BUTTON = gamepad.buttons.f4 ? 1 : 0;
+        Keys->START_BUTTON = gamepad.buttons.f6 ? 1 : 0;
 
         Keys->A_BUTTON = gamepad.buttons.b ? 1 : 0;
         Keys->B_BUTTON = gamepad.buttons.y ? 1 : 0;
@@ -526,13 +526,13 @@ EXPORT void CALL GetKeys( int Control, BUTTONS *Keys )
         Keys->D_DPAD = gamepad.dpad.down ? 1 : 0;
 
         Keys->L_CBUTTON = gamepad.buttons.x ? 1 : 0;
-        Keys->R_CBUTTON = gamepad.buttons.f6 ? 1 : 0;
-        Keys->U_CBUTTON = gamepad.buttons.f5 ? 1 : 0;
+        Keys->R_CBUTTON = gamepad.buttons.f4 ? 1 : 0;
+        Keys->U_CBUTTON = gamepad.buttons.f3 ? 1 : 0;
         Keys->D_CBUTTON = gamepad.buttons.a ? 1 : 0;
 
         Keys->R_TRIG = gamepad.buttons.top_right ? 1 : 0;
-        Keys->Z_TRIG = gamepad.buttons.top_left ? 1 : 0;
-        Keys->L_TRIG = gamepad.buttons.f3 ? 1 : 0;
+        Keys->Z_TRIG = gamepad.buttons.f1 ? 1 : 0;
+        Keys->L_TRIG = gamepad.buttons.top_left ? 1 : 0;
 
         Keys->X_AXIS = gamepad.thumb.x * 80;
         Keys->Y_AXIS = gamepad.thumb.y * -80;
