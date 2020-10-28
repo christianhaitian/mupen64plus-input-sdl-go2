@@ -534,8 +534,8 @@ EXPORT void CALL GetKeys( int Control, BUTTONS *Keys )
         Keys->Z_TRIG = gamepad.buttons.f1 ? 1 : 0;
         Keys->L_TRIG = gamepad.buttons.top_left ? 1 : 0;
 
-        Keys->X_AXIS = gamepad.thumb.x * 80;
-        Keys->Y_AXIS = gamepad.thumb.y * -80;
+        Keys->X_AXIS = gamepad.thumb.x * -80;
+        Keys->Y_AXIS = gamepad.thumb.y * 80;
     }
 
 //     // Handle keyboard input first
