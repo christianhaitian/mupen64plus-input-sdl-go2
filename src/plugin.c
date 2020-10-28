@@ -507,7 +507,7 @@ EXPORT void CALL GetKeys( int Control, BUTTONS *Keys )
         go2_gamepad_state_t gamepad;
         go2_input_gamepad_read(input, &gamepad);
 
-        if (gamepad.buttons.f1 && gamepad.buttons.f6)
+        if (gamepad.buttons.f1)
         {
             SDL_Event sdlevent = {0};
             sdlevent.type = SDL_QUIT;
