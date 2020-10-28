@@ -1056,4 +1056,3 @@ EXPORT void CALL SDL_KeyUp(int keymod, int keysym)
 {
     myKeyState[keysym] = 0;
 }
-
