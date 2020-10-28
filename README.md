@@ -222,8 +222,8 @@ Select Rumblepack = "."
 ## Based on Ubuntu 16.04 and newer:
 
 ```bash
-git clone https://github.com/christianhaitian/mupen64plus-input-sdl-go2.git \
-cd mupen64plus-input-sdl-go2/projects/unix \
+git clone https://github.com/christianhaitian/mupen64plus-input-sdl-go2.git
+cd mupen64plus-input-sdl-go2/projects/unix
 make all APIDIR=api/
 ```
 mupen64plus-input-sdl.so will be created and should be copied into the mupen64plus folder that contains the main executable for the emulator.  Input keys should be defined in InputAutoCfg.ini file located in the same folder as the executable.  Key events can be configured in the mupen64plus.cfg file usually located in another location like within your home folder's .config/mupen64plus folder.
